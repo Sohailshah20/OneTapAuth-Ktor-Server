@@ -12,9 +12,7 @@ import org.koin.java.KoinJavaComponent.inject
 fun Application.configureRouting() {
 
     routing {
-
         val userDataSource : UserDataSource by inject(UserDataSource::class.java)
-
         rootRoute()
         tokenVerificationRoute(application, userDataSource)
         getUserInfoRoute(application, userDataSource)
